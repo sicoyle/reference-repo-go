@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/reference-repo-go/api/internal"
+	"github.com/reference-repo-go/api/internal/calculator"
 )
 
 const (
@@ -23,7 +23,7 @@ func (s *server) handleAddition() http.HandlerFunc {
 		total int
 	}
 	return func(w http.ResponseWriter, r *http.Request) {
-		var digitsToAdd internal.Digits
+		var digitsToAdd calculator.Calculator
 		err := s.Decode(w, r, &digitsToAdd)
 		defer r.Body.Close()
 		if err != nil {

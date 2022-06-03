@@ -17,7 +17,7 @@ func main() {
 }
 
 func run() error {
-	s := server.New()
+	s := server.NewServer()
 	s.Routes()
 	log := logrus.New()
 	port := "8080"

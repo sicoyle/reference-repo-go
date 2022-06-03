@@ -11,7 +11,7 @@ type server struct {
 }
 
 // New creates a new server
-func New() *server {
+func NewServer() *server {
 	r := mux.NewRouter()
 	return &server{
 		router: r,
