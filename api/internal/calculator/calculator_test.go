@@ -20,6 +20,7 @@ func TestTotal(t *testing.T) {
 	for _, tc := range tests {
 		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
 			c := Calculator{tc.input}
 			got := c.Total()
 			assert.Equal(t, tc.want, got)
