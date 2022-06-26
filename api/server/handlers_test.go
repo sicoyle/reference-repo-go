@@ -24,6 +24,7 @@ func TestHandleIndex(t *testing.T) {
 	for _, tc := range tests {
 		srv := NewServer()
 		srv.Routes()
+		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
 			rr := httptest.NewRecorder()
@@ -73,6 +74,7 @@ func TestHandleAddition(t *testing.T) {
 	for _, tc := range tests {
 		srv := NewServer()
 		srv.Routes()
+		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
 			rr := httptest.NewRecorder()
