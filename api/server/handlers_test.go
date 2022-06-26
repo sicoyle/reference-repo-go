@@ -78,7 +78,7 @@ func TestHandleAddition(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
 			rr := httptest.NewRecorder()
-			req := httptest.NewRequest("GET", "/api/v1/add", strings.NewReader(tc.payloadBody))
+			req := httptest.NewRequest(tc.method, "/api/v1/add", strings.NewReader(tc.payloadBody))
 			srv.ServeHTTP(rr, req)
 			assert.Equal(t, tc.wantStatus, rr.Code)
 			assert.Equal(t, tc.want, strings.TrimSpace(rr.Body.String()))
