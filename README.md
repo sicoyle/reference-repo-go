@@ -1,6 +1,10 @@
 # reference-repo-go
 This repo is meant to contain simple go code to be used as a reference for other go devs.
 
+Currently, the implementation is very basic to include an endpoint for integer addition.
+The selection of a "calculator" implementation was arbitrary,
+and chosen as a simple example use case to demonstrate.
+
 
 ## To run
 
