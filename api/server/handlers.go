@@ -19,9 +19,6 @@ func (s *server) handleIndex() http.HandlerFunc {
 }
 
 func (s *server) handleAddition() http.HandlerFunc {
-	type response struct {
-		total int
-	}
 	return func(w http.ResponseWriter, r *http.Request) {
 		var digitsToAdd calculator.Calculator
 		err := handlers.Decode(w, r, &digitsToAdd)
